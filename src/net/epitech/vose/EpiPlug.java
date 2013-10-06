@@ -13,6 +13,8 @@ import net.epitech.listener.PlayerQuitListener;
 import net.epitech.other.DataBase;
 import net.epitech.tasks.AutoKickTask;
 
+import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
