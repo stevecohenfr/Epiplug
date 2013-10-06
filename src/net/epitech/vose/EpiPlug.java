@@ -93,6 +93,16 @@ public class EpiPlug extends JavaPlugin {
 		}
 		/* reset database */
 		DataBase.resetUserList();
+		
+		/* reset all players */
+		File BaseFolder = new File(Bukkit.getServer().getWorld("Epitech Montpellier").getWorldFolder(), "players");
+	       
+        for(OfflinePlayer p : Bukkit.getOfflinePlayers())
+        {
+            File playerFile = new File(BaseFolder, p.getName() + ".dat");
+            playerFile.delete();
+            this.getLogger().log(Level.INFO, p.getName() + ".dat deleted!");
+        }
 	}
 	
 	@Override
