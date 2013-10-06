@@ -1,0 +1,12 @@
+#Configuration du mode auto-kick
+Auto-kick:
+  #Temps avant l ejection automatique du joueur (secondes)
+  Time: 3600
+#Configuration MySQL
+MySQL:
+  Host: 62.210.215.38
+  Port: 3306
+  Bdd: VOSE
+  User: VoseWriter
+  Pass: jdopife74
+  
