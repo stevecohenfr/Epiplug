@@ -1,12 +1,71 @@
 #Configuration du mode auto-kick
+# Delay/Period/Time in seconds
 Auto-kick:
-  #Temps avant l ejection automatique du joueur (secondes)
-  Time: 3600
+  Time: 7200
 #Configuration MySQL
 MySQL:
-  Host: 62.210.215.38
+  Host: 127.0.0.1
   Port: 3306
   Bdd: VOSE
   User: VoseWriter
   Pass: jdopife74
-  
+Query:
+  Port: 31339
+Queue:
+  Worlds:
+    - Montpellier
+Tips:
+  Enabled: true
+  Delay: 10
+  Period: 30
+#  Time:
+#    Time : 1200
+#    Object:
+#      ==: org.bukkit.inventory.ItemStack
+#      type: X24498
+#      amount: 1
+#  Libraries:
+#    Number: 3
+#    Object:
+#      ==: org.bukkit.inventory.ItemStack
+#      type: X24499
+#      amount: 1
+#  Bots:
+#    Number: 5
+#    Object:
+#      ==: org.bukkit.inventory.ItemStack
+#      type: X24500
+#      amount: 1
+Application:
+  Mouse:
+    Name: X24498
+    Object:
+      ==: org.bukkit.inventory.ItemStack
+      type: X24498
+      amount: 1
+  Keyboard:
+    Name: X24499
+    Object:
+      ==: org.bukkit.inventory.ItemStack
+      type: X24499
+      amount: 1
+  Ethernet:
+    Name: X24500
+    Object:
+      ==: org.bukkit.inventory.ItemStack
+      type: X24500
+      amount: 1
+  Ram:
+    Name: X24501
+    Object:
+      ==: org.bukkit.inventory.ItemStack
+      type: X24501
+      amount: 1
+  GCard:
+    Name: X24502
+    Object:
+      ==: org.bukkit.inventory.ItemStack
+      type: X24502
+      amount: 1
+Sessions:
+  Time: 300

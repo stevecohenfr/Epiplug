@@ -3,4 +3,117 @@ main: net.epitech.vose.EpiPlug
 version: 0.1
 depends:
 commands:
+   #setQueueSign:
+   #   aliases: sqs
+   #   usage: /setQueueSign
+   #   description: Set a sign to be the candidature sign
+   #   permission: epiplug.definequeue.sign
+   #   permission-message: You don't have permission to do that !
+   #setQueueChair:
+   #   aliases: sqc
+   #   usage: /setQueueChair
+   #   description: Set a chair to first be the adm chair and then set the guest one
+   #   permission: epiplug.definequeue.chair
+   #   permission-message: You don't have permission to do that !
+   setCandidateComputer:
+      aliases: scc
+      usage: /setCandidateComputer
+      description: Set a computer to candidate
+      permission: epiplug.setCandidateComputer
+      permission-message: You don't have permission to do that !
+   setLibraryPDF:
+      aliases: slp
+      usage: /setLibraryPDF <link>
+      description: Set a library block with a pdf in link
+      permission: epiplug.setLibraryPDF
+      permission-message: You don't have permission to do that !
+   nextGuest:
+      aliases: next
+      usage: /nextGuest
+      description: Call and teleport in front of you the next player in the queue
+      permission: epiplug.next
+      permission-message: You don't have permission to do that !
+   #resetAllChairs:
+   #   aliases: rac
+   #   usage: /resetAllChairs
+   #   description: Reset all yours subscribed chairs in db. Warning, can't be undone, you'll have to set the chairs again !
+   #   permission: epiplug.resetAllChairs
+   #   permission-message: You don't have permission to do that !
+   pinfo:
+      aliases: pinfo
+      usage: /pinfo <player>
+      description: Give info about player
+      permission: epiplug.pinfo
+      permission-message: You don't have permission to do that !
+   preset:
+      aliases: preset
+      usage: /preset <player>
+      description: Reset a specific player
+      permission: epiplug.preset
+      permission-message: You don't have permission to do that !
+   paddtime:
+      aliases: paddtime
+      usage: /paddtime <player> <time value>
+      description: Add time to the player
+      permission: epiplug.paddtime
+      permission-message: You don't have permission to do that !
+   forceValidateCandidate:
+      aliases: fvc
+      usage: /forceValidateCandidate <player>
+      description: Force all candidate conditions for the player
+      permission: epiplug.forcevalidatecandidate
+      permission-message: You don't have permission to do that !
+   where:
+      aliases: where
+      usage: /where <player>
+      description: Give the world's name of the player
+      permission: epiplug.where
+      permission-message: You don't have permission to do that !
+   listUsersInQueue:
+      aliases: luq
+      usage: /listUsersInQueue
+      description: List all users in the queue of the admin's world (if there's a queue)
+      permission: epiplug.listusersinqueue
+      permission-message: You don't have permission to do that !
+   absent:
+      aliases: abs
+      usage: /absent
+      description: You will no longer be available for the queue
+      permission: epiplug.absent
+      permission-message: You don't have permission to do that !
+   sesame:
+      usage: /sesame
+      description: Pass chat stage on tutoriel
+   test:
+      usage: /test
+      description: test a command
+   setSecurity:
+      aliases: security
+      usage: /setSecurity <true/false>
+      description: You can disable security with this command
+      
 permissions:
+   epiplug.*:
+      description: Gives access to all EpiPLug commands
+      children:
+    #     epiplug.definequeue.sign: true
+    #     epiplug.definequeue.chair: true
+         epiplug.setCandidateComputer: true
+         epiplug.setLibraryPDF: true
+         epiplug.next: true
+         epiplug.listusersinqueue: true
+         epiplug.where: true
+         epiplug.absent: true
+    #     epiplug.resetAllChairs: true
+         epiplug.pinfo: true
+         epiplug.preset: true
+         epiplug.paddtime: true
+         epiplug.forcevalidatecandidate: true
+      default: op
+   #epiplug.definequeue.*:
+   #   description: Gives access to creation of all queue elements
+   #   children:
+   #      epiplug.definequeue.sign: true
+   #      epiplug.definequeue.chair: true
+   #   default: op
+      
